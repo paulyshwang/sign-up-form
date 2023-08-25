@@ -11,7 +11,7 @@ li {
 
 main a {
   text-decoration: none;
-  color: green;
+  color: darkgreen;
 }
 
 .sidebar a {
@@ -24,9 +24,6 @@ body {
 }
 
 .sidebar {
-  width: 40vw;
-  min-width: 375px;
-
   background-image: url(assets/halie-west-25xggax4bSA-unsplash.jpg);
   background-position: center;
   background-size: cover;
@@ -36,6 +33,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  flex: 3;
 }
 
 h1 {
@@ -61,20 +60,93 @@ h1 img {
   margin-bottom: 10px;
 }
 
+/* Main section */
 main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex: 5;
+}
+
+main > * {
+  padding: 20px;
+}
+
+.hero-text, 
+form > *,
+.footer {
+  margin-left: 20px;
 }
 
 .hero-text,
 form,
 .footer {
-  flex-grow: 1;
+flex: 1;
 }
 
+/* Hero text section */
 .hero-text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
+}
+
+.hero-text > p {
+  margin-bottom: 40px;
+  font-size: 1.5rem;
+  width: 85%;
+}
+
+/* Form section */
+form {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;  /* Copied from https://getcssscan.com/css-box-shadow-examples */
+  min-height: 300px; /* Change this after adding media query? */
+
+  margin-bottom: 10px;
+}
+
+form > p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+form > ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 80px;
+  width: 600px;
+}
+
+form > ul > li {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+input {
+  background-color: white;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  width: 100%;
+  padding: 7px;
+  font-size: 14px;
+}
+
+button {
+  background-color: darkgreen;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 40px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;  /* Copied from https://getcssscan.com/css-box-shadow-examples */
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: green;
+}
+
+button:active {
+  background-color: olivedrab;
 }
