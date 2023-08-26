@@ -1,5 +1,4 @@
 * {
-  /* outline: 1px dotted red; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -30,29 +29,25 @@ main a {
   color: white;
 }
 
+/* Sidebar section */
 .sidebar {
   background-image: url(assets/images/halie-west-25xggax4bSA-unsplash.jpg);
   background-position: center;
   background-size: cover;
-
   color: white;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   flex: 3;
 }
 
 h1 {
   font-size: 6rem;
   background-color: rgb(0, 0, 0, 0.5);
-  margin-top: 25vh;
-
+  margin-top: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
-
   padding-top: 1rem;   /* Compensates for font, which seems to have a padding-bottom of 1rem? */
   font-family: "Norse Bold";
 }
@@ -66,7 +61,9 @@ h1 img {
 .attribution {
   text-align: center;
   margin-top: auto;
-  margin-bottom: 10px;
+  margin-bottom: 0.7rem;
+  font-size: 0.9rem;
+  font-weight: 300;
 }
 
 /* Main section */
@@ -79,13 +76,13 @@ main {
 }
 
 main > * {
-  padding: 20px;
+  padding: 24px;
 }
 
 .hero-text, 
 form > *,
 .footer {
-  margin-left: 20px;
+  margin-left: 24px;
 }
 
 .hero-text,
@@ -111,16 +108,20 @@ flex: 1;
 /* Form section */
 form {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;  /* Copied from https://getcssscan.com/css-box-shadow-examples */
-  min-height: 300px; /* Change this after adding media query? */
-
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   background-color: white;
 }
 
 form > p {
   font-size: 1.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 0.3rem;
   font-weight: 600;
+}
+
+.required-message {
+  font-size: 0.8rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
 }
 
 form > ul {
@@ -136,23 +137,46 @@ form > ul > li {
   width: 250px;
 }
 
+label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08rem;
+  margin-bottom: 0.15rem;
+}
+
 input {
   background-color: white;
   border: 1px solid lightgrey;
-  border-radius: 3px;
+  border-radius: 5px;
   width: 100%;
-  padding: 7px;
-  font-size: 14px;
+  padding: 0.4rem 0.5rem;
+  font-size: 1rem;
 }
 
+input:focus {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;  /* Copied from https://getcssscan.com/css-box-shadow-examples */
+}
+
+.error {
+  border: 1px solid crimson;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;  /* Copied from https://getcssscan.com/css-box-shadow-examples */
+}
+
+.error-message::after {
+  font-size: 0.8rem;
+  color: crimson;
+  content: "* Passwords do not match"
+}
+
+/* Footer section */
 button {
   background-color: darkgreen;
   color: white;
   border: none;
-  border-radius: 7px;
-  padding: 15px 40px;
+  border-radius: 10px;
+  padding: 0.9rem 3rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;  /* Copied from https://getcssscan.com/css-box-shadow-examples */
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
   font-size: 1.1rem;
   font-weight: 600;
 }

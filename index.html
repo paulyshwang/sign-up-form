@@ -18,37 +18,39 @@
         <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
         <p>You <em>know</em> you want to.</p>
       </div>
-      <form action="#" method="post">
+      <form action="#" method="post" id="sign-up-form">
         <p>Let's do this!</p>
+        <p class="required-message">Required fields are marked with an asterisk (*)</p>
         <ul>
           <li>
-            <label for="firstname">First Name</label>
-            <input type="text" name="firstname" id="firstname">
+            <label for="first-name">FIRST NAME</label>
+            <input type="text" name="first-name" id="first-name">
           </li>
           <li>
-            <label for="lastname">Last Name</label>
-            <input type="text" name="lastname" id="lastname">
+            <label for="last-name">LAST NAME</label>
+            <input type="text" name="last-name" id="last-name">
           </li>
           <li>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email">
+            <label for="email">EMAIL*</label>
+            <input type="email" name="email" id="email" required>
           </li>
           <li>
-            <label for="phonenumber">Phone Number</label>
-            <input type="tel" name="phonenumber" id="phonenumber">
+            <label for="phone-number">PHONE NUMBER</label>
+            <input type="tel" name="phone-number" id="phone-number">
           </li>
           <li>
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password">
+            <label for="password">PASSWORD*</label>
+            <input type="password" name="password" id="password" class="error" required>
+            <span class="error-message"></span>
           </li>
           <li>
-            <label for="confirmation">Confirm Password</label>
-            <input type="password" name="confirmation" id="confirmation">
+            <label for="confirmation">CONFIRM PASSWORD*</label>
+            <input type="password" name="confirmation" id="confirmation" class="error" required>
           </li>
         </ul>
       </form>
       <div class="footer">
-        <button type="submit">Create Account</button>
+        <button type="submit" form="sign-up-form">Create Account</button>
         <p>Already have an account? <a href="#">Log in</a></p>
       </div>
     </main>
