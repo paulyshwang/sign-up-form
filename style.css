@@ -5,6 +5,18 @@
   box-sizing: border-box;
 }
 
+/* Font for Odin logo */
+@font-face {
+  font-family: "Norse Bold";
+  src: url(assets/fonts/Norse-Bold.otf);
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
 li {
   list-style-type: none;
 }
@@ -18,13 +30,8 @@ main a {
   color: white;
 }
 
-body {
-  display: flex;
-  height: 100vh;
-}
-
 .sidebar {
-  background-image: url(assets/halie-west-25xggax4bSA-unsplash.jpg);
+  background-image: url(assets/images/halie-west-25xggax4bSA-unsplash.jpg);
   background-position: center;
   background-size: cover;
 
@@ -38,8 +45,7 @@ body {
 }
 
 h1 {
-  font-size: 3rem;
-  text-align: center;
+  font-size: 6rem;
   background-color: rgb(0, 0, 0, 0.5);
   margin-top: 25vh;
 
@@ -47,11 +53,14 @@ h1 {
   justify-content: center;
   align-items: center;
 
-  padding: 10px;
+  padding-top: 1rem;   /* Compensates for font, which seems to have a padding-bottom of 1rem? */
+  font-family: "Norse Bold";
 }
 
 h1 img {
-  height: 6rem;
+  height: 10rem;
+  padding-bottom: 1rem;  /* Matches font, which seems to have a padding-bottom of 1rem? */
+  margin-right: 0.5rem;
 }
 
 .attribution {
@@ -66,6 +75,7 @@ main {
   flex-direction: column;
   justify-content: center;
   flex: 5;
+  background-color: #fafafa;
 }
 
 main > * {
@@ -94,6 +104,7 @@ flex: 1;
 .hero-text > p {
   margin-bottom: 40px;
   font-size: 1.5rem;
+  font-weight: 600;
   width: 85%;
 }
 
@@ -103,11 +114,13 @@ form {
   min-height: 300px; /* Change this after adding media query? */
 
   margin-bottom: 10px;
+  background-color: white;
 }
 
 form > p {
   font-size: 1.5rem;
   margin-bottom: 20px;
+  font-weight: 600;
 }
 
 form > ul {
@@ -136,11 +149,12 @@ button {
   background-color: darkgreen;
   color: white;
   border: none;
-  border-radius: 5px;
-  padding: 10px 40px;
+  border-radius: 7px;
+  padding: 15px 40px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;  /* Copied from https://getcssscan.com/css-box-shadow-examples */
   margin-bottom: 20px;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 button:hover {
@@ -149,4 +163,8 @@ button:hover {
 
 button:active {
   background-color: olivedrab;
+}
+
+.footer {
+  font-weight: 500;
 }
